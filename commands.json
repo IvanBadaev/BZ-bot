@@ -1,0 +1,8 @@
+{
+    "start": "start",
+    "setname": "setname",
+    "addmedicine": "addmedicine",
+    "listmedicines": "listmedicines",
+    "addreminder": "addreminder",
+    "listreminders": "listreminders"
+}
