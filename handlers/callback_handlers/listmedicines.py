@@ -1,6 +1,7 @@
 from db import functions as db
 from telegram import Update
 from telegram.ext import ContextTypes
+import keyboards
 
 async def handle_listmedicines_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Access the callback query
@@ -13,7 +14,7 @@ async def handle_listmedicines_callback(update: Update, context: ContextTypes.DE
     if medicines:
         # Format the list of medicines into a string
         medicine_list = "\n".join([medicine["name"] for medicine in medicines])
-        await query.message.reply_text(f"Here are the medicines you've added:\n{medicine_list}")
+        await query.message.reply_text(f"Вот лекарства, которые вы добавили:\n{medicine_list}", reply_markup=keyboards.get_main_menu_keyboard())
     else:
         # If the user has no medicines
-        await query.message.reply_text("You haven't added any medicines yet.")
+        await query.message.reply_text("Вы пока не добавили лекарств.", reply_markup=keyboards.get_main_menu_keyboard())

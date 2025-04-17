@@ -1,8 +1,13 @@
 {
     "start": "start",
+    "help": "help",
+    "menu": "menu",
     "setname": "setname",
     "addmedicine": "addmedicine",
+    "deletemedicine": "deletemedicine",
     "listmedicines": "listmedicines",
     "addreminder": "addreminder",
-    "listreminders": "listreminders"
+    "listreminders": "listreminders",
+    "deletereminder": "deletereminder",
+    "seehistory": "seehistory"
 }
